@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require("mongoose");
 const path = require('path');
 
 const app = express();
@@ -12,3 +13,19 @@ app.get('/', (req, res) => {
 
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
+
+const startDB = async () => {
+  try {
+    await mongoose.connect(
+      "mongodb://localhost:27017"
+    );
+
+    console.log("DB connected")
+
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+};
+
+startDB();
