@@ -1012,10 +1012,11 @@
   height: 100%;
   top: 0;
   bottom: 0;
+  left: calc(50% - 600px);
   border-radius: var(--br-21xl);
   background-color: var(--color-midnightblue-300);
   backdrop-filter: blur(80px);
-  width: 100%;
+  width: 1200px;
 }
 .pick-up-your {
   color: var(--color-plum-100);
@@ -5166,8 +5167,6 @@
     visibility: hidden;
     
   }
-
-  
 
   
 }

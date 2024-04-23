@@ -59,7 +59,7 @@
           </div>
           <div class="chips-wrapper">
             <div class="chips">
-              <a class="home" href="index.html">Home</a>
+              <a class="home" href="/">Home</a>
               <a class="about" href="#aboutUs">About</a>
               <a class="services" href="#services">Services</a>
               <a class="block">Block</a>
@@ -278,13 +278,13 @@
             </div>
           </div>
           <div class="field-wrapper">
-            <div class="field">
-              <input id="mailtype" class="mailtype" type="text" value="Enter your E-mail to stay informed ..." >
+            <form class="field" method="POST" action="/api/mails">
+              <input name="mail" id="mailtype" class="mailtype" type="text" value="Enter your E-mail to stay informed ..." >
               <p id="test" class="test"></p>
-              <button onclick="showMail()" class="small-button">
+              <button  class="small-button">
                 <b class="send">Send</b>
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -934,7 +934,7 @@
               <div class="input-splitter">
                 <div class="get-in-touch">Get in Touch!</div>
                 <div class="error-handler1">
-                  <form class="fields">
+                  <form method="POST" action="/home" class="fields">
                     <div class="component-17">
                       <div class="select-subject">Select subject *</div>
                       <div class="field1">
@@ -948,11 +948,11 @@
                     </div>
                     <div class="component-18">
                       <div class="name4">Name *</div>
-                      <input class="field2" placeholder="Julia" type="text" />
+                      <input name="name" class="field2" placeholder="Julia" type="text" />
                     </div>
                     <div class="component-19">
                       <div class="e-mail">E-mail *</div>
-                      <input class="field3" placeholder="E-mail" type="text" />
+                      <input name="email" class="field3" placeholder="E-mail" type="text" />
                     </div>
                     <div class="component-20">
                       <div class="phone-number">Phone number *</div>
@@ -960,6 +960,7 @@
                         class="field4"
                         placeholder="Phone number"
                         type="text"
+                        name="phone"
                       />
                     </div>
                     <div class="component-22">
@@ -972,6 +973,9 @@
                       >
                       </textarea>
                     </div>
+                    <button class="buttons6">
+                      <div class="get-started4">Submit</div>
+                    </button>
                   </form>
                   <button class="field6">
                     <div class="attach-file-not">
@@ -985,9 +989,7 @@
                   </button>
                 </div>
               </div>
-              <button class="buttons6">
-                <div class="get-started4">Submit</div>
-              </button>
+              
             </div>
           </div>
         </div>
