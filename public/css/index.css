@@ -3985,8 +3985,8 @@
   padding: 0 var(--padding-xl) 0 0;
   box-sizing: border-box;
   gap: var(--gap-xs);
-  z-index: 5;
-  margin-top: -449px;
+  z-index: 15;
+  margin-top: -30%;
 }
 .style-setter {
   position: absolute;
@@ -5159,15 +5159,12 @@
     font-size: 2rem;
   }
 
-  .buttons{
-    visibility: hidden;
-  }
 
-  .chips {
-    visibility: hidden;
-    
-  }
+  .subscribe {
+    height: 0;
+  } 
 
+  
   
 }
 /*@media screen and (max-width: 1125px) {

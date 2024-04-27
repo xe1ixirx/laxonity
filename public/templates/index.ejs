@@ -278,8 +278,8 @@
             </div>
           </div>
           <div class="field-wrapper">
-            <form class="field" method="POST" action="/api/mails">
-              <input name="mail" id="mailtype" class="mailtype" type="text" value="Enter your E-mail to stay informed ..." >
+            <form class="field" method="POST" action="/mail">
+              <input name="mail" id="mailtype" class="mailtype" type="text" placeholder="Enter your E-mail to stay informed ..." >
               <p id="test" class="test"></p>
               <button  class="small-button">
                 <b class="send">Send</b>
@@ -964,12 +964,10 @@
                       />
                     </div>
                     <div class="component-22">
-                      <div class="phone-number1">Phone number *</div>
+                      <div class="phone-number1">Text *</div>
                       <textarea
                         class="field5"
-                        placeholder="Phone number"
-                        rows="{6}"
-                        cols="{23}"
+                        name="usrText"   
                       >
                       </textarea>
                     </div>
@@ -977,16 +975,6 @@
                       <div class="get-started4">Submit</div>
                     </button>
                   </form>
-                  <button class="field6">
-                    <div class="attach-file-not">
-                      Attach file (Not Mandatory)
-                    </div>
-                    <img
-                      class="tabler-icons1"
-                      alt=""
-                      src="../tabler-icons.svg"
-                    />
-                  </button>
                 </div>
               </div>
               

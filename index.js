@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require("mongoose");
 const path = require('path');
-const formRoute = require("./routes/mail.route.js")
+const { routerUsr, routerMail } = require("./routes/mail.route.js")
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -10,7 +10,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs")
 
-app.use('/home', formRoute);
+app.use('/home', routerUsr);
+app.use('/mail', routerMail);
 
 app.use(express.static(path.join(__dirname, 'public')));
 

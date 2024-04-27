@@ -16,6 +16,11 @@ const usrSchema = mongoose.Schema(
             type: String,
             required: [true, "Please enten your phone number"]
         },
+
+        usrText:{
+            type: String,
+            required: [true, "Please enten something"]
+        },
     },
     {
         timestamps: true

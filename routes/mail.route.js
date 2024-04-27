@@ -1,10 +1,12 @@
 const express = require('express');
-const router = express.Router();
-const { postUsr } = require('../controllers/mail.controller.js')
+const routerUsr = express.Router();
+const routerMail = express.Router();
+const { postUsr, postMail } = require('../controllers/mail.controller.js')
 
-router.post('/', postUsr);
+routerUsr.post('/', postUsr);
+routerMail.post('/', postMail);
 
 
-module.exports = router;
+module.exports = { routerUsr, routerMail }
 
 
